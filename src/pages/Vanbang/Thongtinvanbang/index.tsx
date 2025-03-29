@@ -82,19 +82,19 @@ const ThongTinVanBangComponent: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleDeleteThongTin = (soVaoSo: number, maSoVanBang: string) => {
-    try {
-      const updatedList = thongTinList.filter(
-        (item) => !(item.soVaoSo === soVaoSo && item.maSoVanBang === maSoVanBang)
-      );
-      saveThongTinVanBang(updatedList);
-      setThongTinList(updatedList);
-      message.success("Xóa thành công");
-    } catch (error) {
-      console.error("Lỗi khi xóa văn bằng:", error);
-      message.error("Xóa văn bằng thất bại!");
-    }
-  };
+  // const handleDeleteThongTin = (soVaoSo: number, maSoVanBang: string) => {
+  //   try {
+  //     const updatedList = thongTinList.filter(
+  //       (item) => !(item.soVaoSo === soVaoSo && item.maSoVanBang === maSoVanBang)
+  //     );
+  //     saveThongTinVanBang(updatedList);
+  //     setThongTinList(updatedList);
+  //     message.success("Xóa thành công");
+  //   } catch (error) {
+  //     console.error("Lỗi khi xóa văn bằng:", error);
+  //     message.error("Xóa văn bằng thất bại!");
+  //   }
+  // };
 
   const columns = [
     { title: "Số vào sổ", dataIndex: "soVaoSo", key: "soVaoSo" },
