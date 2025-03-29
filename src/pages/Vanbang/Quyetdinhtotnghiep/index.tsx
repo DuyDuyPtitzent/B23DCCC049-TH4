@@ -59,22 +59,7 @@ const VanBangQuyetDinhThiTotNghiep: React.FC = () => {
     { title: "Ngày ban hành", dataIndex: "ngayBanHanh", key: "ngayBanHanh" },
     { title: "Trích yếu", dataIndex: "trichYeu", key: "trichYeu" },
     { title: "Sổ văn bằng", dataIndex: "maSoVanBang", key: "maSoVanBang" },
-    {
-      title: "Hành động",
-      key: "action",
-      render: (_: any, record: QuyetDinhTotNghiep) => (
-        <Popconfirm
-          title="Bạn có chắc chắn muốn xóa?"
-          onConfirm={() => handleDeleteQuyetDinh(record.soQD)}
-          okText="Có"
-          cancelText="Không"
-        >
-          <Button type="primary" danger>
-            Xóa
-          </Button>
-        </Popconfirm>
-      ),
-    },
+    
   ];
 
   return (
